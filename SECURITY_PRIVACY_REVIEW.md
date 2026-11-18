@@ -1,6 +1,6 @@
 # Public Security & Privacy Review
 
-**Scope:** This portfolio and the two linked WQE7002 Assignment 1 repositories (Option A and Option B).  
+**Scope:** This portfolio, the new curated public project folders, and a preliminary review of the original coursework sources.  
 **Review date:** 18 November 2026  
 **Status:** Preliminary source review — not a complete security assessment.
 
@@ -16,7 +16,7 @@
 
 | Finding | Assessment | Follow-up |
 | --- | --- | --- |
-| Student matriculation identifier appears in both linked repository names and coursework reports | **Privacy review needed**: public personal identifier, not a credential | Decide whether academic submission requirements justify publication. Consider private repositories or sanitised public copies; renaming files alone does not remove Git history. |
+| Student matriculation identifier appears in original coursework repository names and reports | **Privacy review needed**: public personal identifier, not a credential | Decide whether academic submission requirements justify publication. Consider private repositories or sanitised public copies; renaming files alone does not remove Git history. |
 | Private Docker lab IP and MAC addresses appear in evidence files | **Context-dependent**: these are isolated lab addresses, not public routable targets | Confirm they are synthetic/approved for public disclosure and not identifying other people or real production infrastructure. |
 | PCAP files are included in both linked repositories | **Not yet fully inspected** | Inspect packet payloads, metadata, hostnames, identifiers, and any captured credentials before asserting they are safe to publish. |
 | GitHub file search returned no matches for sensitive-keyword queries | **Inconclusive** | Perform a full repository and Git-history secrets scan (e.g. Gitleaks), rather than interpreting zero search results as proof of safety. |
@@ -34,5 +34,9 @@ This review is based on readable GitHub source files including the portfolio HTM
 ## References
 
 - [Portfolio](https://github.com/Wan-NotOne/cybersecurity-portfolio)
-- [Option A](https://github.com/Wan-NotOne/WQE7002_Assignment_1_25057831_OptionA)
-- [Option B](https://github.com/Wan-NotOne/WQE7002_Assignment_1_25057831_OptionB)
+- [Public ARP project](projects/network-device-discovery/)
+- [Public TCP SYN project](projects/tcp-syn-port-scanner/)
+
+## Curated portfolio edition (pending verification)
+
+The two public-edition project folders are prepared in a feature branch. The original coursework reports, packet captures, scope evidence and student identifiers were not copied. Project cards will link to the curated folders after the branch is reviewed and merged. This does **not** remove information from the separately published original coursework repositories. The new source and unit tests still require a fresh test run, full-tree identifier review and secrets scan before the publication is considered verified.
