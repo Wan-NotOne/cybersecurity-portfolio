@@ -1,8 +1,8 @@
 # Public Security & Privacy Review
 
 **Scope:** This portfolio, the new curated public project folders, and a preliminary review of the original coursework sources.  
-**Review date:** 18 November 2026  
-**Status:** Preliminary source review — not a complete security assessment.
+**Review date:** 19 November 2026  
+**Status:** In progress — source and evidence-text review; not a complete security assessment.
 
 ## Confirmed practices
 
@@ -37,6 +37,14 @@ This review is based on readable GitHub source files including the portfolio HTM
 - [Public ARP project](projects/network-device-discovery/)
 - [Public TCP SYN project](projects/tcp-syn-port-scanner/)
 
-## Curated portfolio edition (pending verification)
+## Curated portfolio edition (current state)
 
-The two public-edition project folders are prepared in a feature branch. The original coursework reports, packet captures, scope evidence and student identifiers were not copied. Project cards will link to the curated folders after the branch is reviewed and merged. This does **not** remove information from the separately published original coursework repositories. The new source and unit tests still require a fresh test run, full-tree identifier review and secrets scan before the publication is considered verified.
+The two public-edition project folders are present on `main`, and the live site's project cards link to these folders. The public project folders currently contain README, requirements, source code and unit-test files, but no `evidence/` directories. This does **not** remove information from separately published original coursework repositories. The new source and unit tests still require a fresh test run, full-tree identifier review and Git-history secrets scan before publication is considered verified.
+
+## Evidence review — 19 November 2026
+
+- Read the original Option A and Option B `result.json`, `nmap-validation.xml`, and `SHA256SUMS`, plus Option A `scope.json`. These text artifacts show private Docker-lab addresses and MAC addresses, not obviously public credentials or student identifiers. Option B `scope.json` could not be fetched in this pass due to a transient connection error.
+- The original `experiment.pcap` files were retrieved as base64 but have **not yet been decoded, packet-inspected or SHA-256-verified**. No claim of PCAP privacy clearance is made.
+- No original evidence files were copied into the public portfolio in this review. Copying evidence should wait until packet inspection, checksum verification and publication-authorisation checks are complete.
+- No unit tests or automated secrets scans were executed in this pass.
+
