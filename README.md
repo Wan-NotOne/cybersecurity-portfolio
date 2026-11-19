@@ -1,18 +1,11 @@
 # Wan Zi Xuan — Cybersecurity Portfolio
 
-Responsive Apple-inspired personal cybersecurity portfolio built using semantic HTML, CSS, and vanilla JavaScript. Default light theme with a visitor-selectable dark theme.
+An Apple-inspired, responsive cybersecurity portfolio with light and dark themes. Showcasing my academic journey, technical skills, cybersecurity projects, and research as a Master of Cybersecurity student at Universiti Malaya.
 
-## Content
-Home, About Me, Education, Technical Skills, Certifications & Training, IEEE Research, WQE7002 Network Device Discovery, WQE7002 TCP SYN Port Scanner, Learning Journey, Career Objective, and Contact.
+### 🌐 [Visit My Cybersecurity Portfolio](https://wan-notone.github.io/cybersecurity-portfolio/)
 
-## Local preview
-Open `docs/index.html` in a browser. No build step or dependencies are required.
+[![Preview of Wan Zi Xuan's Cybersecurity Portfolio homepage](assets/portfolio-homepage.png)](https://wan-notone.github.io/cybersecurity-portfolio/)
 
-## GitHub Pages
-Navigate to **Settings → Pages → Build and deployment**. Select **Deploy from a branch**, then choose **main** and **/docs**, and click **Save**. The site will be available at the repository's GitHub Pages project URL.
+*Click the screenshot to explore the live website.*
 
-## Safety and academic integrity
-Linked scanning projects were conducted in authorised isolated course labs. The IEEE publication is linked via DOI instead of redistributing the publisher PDF.
-
-## Stack
-HTML5 · CSS3 · Vanilla JavaScript. Google Fonts enhance typography online; system fonts provide offline fallback.
+Built with HTML, CSS, and JavaScript. To preview locally, open `docs/index.html` in a browser.
