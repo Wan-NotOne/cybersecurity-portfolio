@@ -18,7 +18,7 @@
 | --- | --- | --- |
 | Student matriculation identifier appears in original coursework repository names and reports | **Privacy review needed**: public personal identifier, not a credential | Decide whether academic submission requirements justify publication. Consider private repositories or sanitised public copies; renaming files alone does not remove Git history. |
 | Private Docker lab IP and MAC addresses appear in evidence files | **Context-dependent**: these are isolated lab addresses, not public routable targets | Confirm they are synthetic/approved for public disclosure and not identifying other people or real production infrastructure. |
-| PCAP files are included in both linked repositories | **Not yet fully inspected** | Inspect packet payloads, metadata, hostnames, identifiers, and any captured credentials before asserting they are safe to publish. |
+| PCAP files are included in both linked repositories | **Packet structure reviewed; publication authorisation pending** | Original Option A and B captures were decoded and packet headers inspected on 19 November 2026. No application payload was present. Confirm authorisation, verify SHA-256, and retain the distinction between packet inspection and full security clearance. |
 | GitHub file search returned no matches for sensitive-keyword queries | **Inconclusive** | Perform a full repository and Git-history secrets scan (e.g. Gitleaks), rather than interpreting zero search results as proof of safety. |
 | Portfolio images and Google Fonts are served from third parties | **Privacy consideration** | Third-party hosts can receive visitors' IP addresses and request metadata. Consider self-hosting properly licensed image assets and system fonts; verify image availability and attribution/licensing. |
 | No automated security scan has been run in this review | **Unverified** | Run static analysis and secret scanning on a local clone, and review dependencies and Git history. |
@@ -29,7 +29,7 @@ Only publish material that is authorised for public release. Before uploading sc
 
 ## Verification status
 
-This review is based on readable GitHub source files including the portfolio HTML/CSS/JavaScript, both project README files, reports, scope JSON, result JSON, Nmap XML and checksum manifests. **It is not a full audit**: raw PCAP packet contents, complete repository trees, Git history, GitHub configuration and actual running deployments have not been exhaustively tested.
+This review is based on readable GitHub source files including the portfolio HTML/CSS/JavaScript, both project README files, reports, scope JSON, result JSON, Nmap XML and checksum manifests. **It is not a full audit**: raw PCAP frames have been structurally parsed, but checksums, complete repository trees, Git history, GitHub configuration and actual running deployments have not been exhaustively tested.
 
 ## References
 
@@ -44,7 +44,7 @@ The two public-edition project folders are present on `main`, and the live site'
 ## Evidence review — 19 November 2026
 
 - Read the original Option A and Option B `result.json`, `nmap-validation.xml`, and `SHA256SUMS`, plus Option A `scope.json`. These text artifacts show private Docker-lab addresses and MAC addresses, not obviously public credentials or student identifiers. Option B `scope.json` could not be fetched in this pass due to a transient connection error.
-- The original `experiment.pcap` files were retrieved as base64 but have **not yet been decoded, packet-inspected or SHA-256-verified**. No claim of PCAP privacy clearance is made.
+- The original `experiment.pcap` files were decoded and structurally inspected: Option A has 8 ARP frames (488 decoded bytes); Option B has 28 IPv4/TCP frames (2032 decoded bytes). Both parsed without truncated records. Option B's TCP frames had zero application payload bytes. No credential-bearing application content was observed; the captures still expose private lab IPs, MAC addresses, TCP ports and timestamps. **SHA-256 hashes have not yet been independently verified.**
 - No original evidence files were copied into the public portfolio in this review. Copying evidence should wait until packet inspection, checksum verification and publication-authorisation checks are complete.
 - No unit tests or automated secrets scans were executed in this pass.
 
