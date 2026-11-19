@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Tue Nov  3 08:11:54 2026 as: nmap -sn -PR -n -oX /evidence/final-clean-nmap-validation.xml 172.28.70.3 172.28.70.10 -->
+<nmaprun scanner="nmap" args="nmap -sn -PR -n -oX /evidence/final-clean-nmap-validation.xml 172.28.70.3 172.28.70.10" start="1793693514" startstr="Tue Nov  3 08:11:54 2026" version="7.94SVN" xmloutputversion="1.05">
+<verbose level="0"/>
+<debugging level="0"/>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.70.3" addrtype="ipv4"/>
+<address addr="86:82:14:C9:5D:DF" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<times srtt="7" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.70.10" addrtype="ipv4"/>
+<address addr="EE:C8:94:D9:00:AB" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<times srtt="42" rttvar="5000" to="100000"/>
+</host>
+<runstats><finished time="1793693514" timestr="Tue Nov  3 08:11:54 2026" summary="Nmap done at Tue Nov  3 08:11:54 2026; 2 IP addresses (2 hosts up) scanned in 0.08 seconds" elapsed="0.08" exit="success"/><hosts up="2" down="0" total="2"/>
+</runstats>
+</nmaprun>

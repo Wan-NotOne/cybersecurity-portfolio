@@ -24,4 +24,12 @@ The original isolated lab classified four authorised TCP ports as open, agreeing
 A SYN/ACK does not prove application health. The original packet capture combined Scapy and Nmap traffic, and the origin of some RST packets was not conclusively established.
 
 ## Privacy and provenance
-This is a selectively copied public portfolio edition, not the original course submission. The original reports, raw packet captures, original evidence checksums and student identifiers are intentionally excluded. Historical results are labelled as such. The new copy requires its own test run and security review before publication as verified evidence.
+This is a selectively copied public portfolio edition, not the original course submission. Selected original scope, result and Nmap XML evidence is now included under [`evidence/`](evidence/). The original PCAP captures, full original reports and student identifiers are not copied into this curated edition. Historical results are labelled as such. The public copy passed a fresh offline unit-test run and targeted security review on 19 November 2026.
+
+## Published evidence
+
+- [`evidence/scope.json`](evidence/scope.json) — authorised isolated-lab scope (historical configuration; **not** authorisation for readers to run a scan).
+- [`evidence/result.json`](evidence/result.json) — recorded output from the original lab.
+- [`evidence/nmap-validation.xml`](evidence/nmap-validation.xml) — independent Nmap comparison from the original lab.
+
+These are verbatim copies of selected original coursework evidence, including private Docker lab addresses and timestamps. The owner reported successful SHA-256 verification of the original evidence set. The raw PCAP remains in the original coursework repository and is not mirrored here. No live network scans were run to publish this evidence.

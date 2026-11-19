@@ -1,0 +1,61 @@
+{
+  "finished_at_utc": "2026-11-05T05:32:17+00:00",
+  "interface": "eth0",
+  "maximum_attempts": 2,
+  "maximum_rate_pps": 20,
+  "mode": "execute",
+  "option": "tcp-syn-scan",
+  "ports": [
+    22,
+    80,
+    443,
+    8080
+  ],
+  "results": [
+    {
+      "attempts_used": 1,
+      "icmp_unreachable": [],
+      "port": 22,
+      "protocol": "tcp",
+      "recovered_by_retry": false,
+      "retry_count": 0,
+      "rst_sent": true,
+      "status": "open"
+    },
+    {
+      "attempts_used": 1,
+      "icmp_unreachable": [],
+      "port": 80,
+      "protocol": "tcp",
+      "recovered_by_retry": false,
+      "retry_count": 0,
+      "rst_sent": true,
+      "status": "open"
+    },
+    {
+      "attempts_used": 1,
+      "icmp_unreachable": [],
+      "port": 443,
+      "protocol": "tcp",
+      "recovered_by_retry": false,
+      "retry_count": 0,
+      "rst_sent": true,
+      "status": "open"
+    },
+    {
+      "attempts_used": 1,
+      "icmp_unreachable": [],
+      "port": 8080,
+      "protocol": "tcp",
+      "recovered_by_retry": false,
+      "retry_count": 0,
+      "rst_sent": true,
+      "status": "open"
+    }
+  ],
+  "scope_id": "wqe7002-a1-standard-tcp-syn-scan-v1",
+  "started_at_utc": "2026-11-05T05:32:16+00:00",
+  "target": "172.28.70.10",
+  "timeout_seconds": 1.5,
+  "tool_version": "0.2.0"
+}
